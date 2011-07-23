@@ -24,16 +24,16 @@ class BadBehavior_Api_Admin extends Zikula_AbstractApi
 
         if (SecurityUtil::checkPermission('BadBehavior::', '::', ACCESS_ADMIN)) {
             $links[] = array(
-                'url' => ModUtil::url('BadBehavior', 'admin', 'modifyconfig'),
-                'text' => $this->__('Settings'),
-                'class' => 'z-icon-es-config');
+                'url' => ModUtil::url('BadBehavior', 'admin', 'view'),
+                'text' => $this->__('Access log'),
+                'class' => 'z-icon-es-view');
         }
 
         if (SecurityUtil::checkPermission('BadBehavior::', '::', ACCESS_ADMIN)) {
             $links[] = array(
-                'url' => ModUtil::url('BadBehavior', 'admin', 'view'),
-                'text' => $this->__('Access log'),
-                'class' => 'z-icon-es-view');
+                'url' => ModUtil::url('BadBehavior', 'admin', 'modifyconfig'),
+                'text' => $this->__('Settings'),
+                'class' => 'z-icon-es-config');
         }
 
         return $links;

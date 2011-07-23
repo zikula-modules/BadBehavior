@@ -20,7 +20,7 @@ class BadBehavior_Controller_Admin extends Zikula_AbstractController
     public function main()
     {
         $this->throwForbiddenUnless(SecurityUtil::checkPermission('BadBehavior::', '::', ACCESS_ADMIN), LogUtil::getErrorMsgPermission());
-        $this->redirect(ModUtil::url('BadBehavior', 'admin', 'modifyconfig'));
+        $this->redirect(ModUtil::url('BadBehavior', 'admin', 'view'));
     }
 
     public function view()
