@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * BadBehavior - an implementation of the bad-behavior php library
+ * for the Zikula Application Framework
+ * 
+ * @license MIT
+ *
+ * Please see the NOTICE file distributed with this source code for further
+ * information regarding copyright and licensing.
+ */
 class BadBehavior_Controller_Admin extends Zikula_AbstractController
 {
 

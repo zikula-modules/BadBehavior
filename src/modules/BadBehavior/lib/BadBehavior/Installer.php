@@ -1,12 +1,10 @@
 <?php
+
 /**
- * Copyright Zikula Foundation 2010 - Zikula Application Framework
- *
- * This work is contributed to the Zikula Foundation under one or more
- * Contributor Agreements and licensed to You under the following license:
- *
+ * BadBehavior - an implementation of the bad-behavior php library
+ * for the Zikula Application Framework
+ * 
  * @license MIT
- * @package ZikulaExamples_BadBehavior
  *
  * Please see the NOTICE file distributed with this source code for further
  * information regarding copyright and licensing.
@@ -34,9 +32,9 @@ class BadBehavior_Installer extends Zikula_AbstractInstaller
         } catch (Exception $e) {
             return false;
         }
-        
+
         EventUtil::registerPersistentModuleHandler('BadBehavior', 'core.init', array('BadBehavior_Listeners', 'init'));
-        
+
         $modvars = array(
             'enabled' => true,
             'strict' => false,
@@ -45,7 +43,7 @@ class BadBehavior_Installer extends Zikula_AbstractInstaller
             'itemsperpage' => 25,
             'display_stats' => false);
         $this->setVars($modvars);
-        
+
         // Initialisation successful
         return true;
     }
@@ -61,13 +59,11 @@ class BadBehavior_Installer extends Zikula_AbstractInstaller
      */
     public function upgrade($oldversion)
     {
-        switch ($oldversion)
-        {
+        switch ($oldversion) {
             case '2.0.33':
                 EventUtil::registerPersistentModuleHandler('BadBehavior', 'core.init', array('BadBehavior_Listeners', 'init'));
             case '2.0.43':
-                // future upgrades
-
+            // future upgrades
         }
 
         // Update successful

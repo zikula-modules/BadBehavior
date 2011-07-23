@@ -1,6 +1,8 @@
 <?php
+
 /**
- * Tag - a content-tagging module for the Zikukla Application Framework
+ * BadBehavior - an implementation of the bad-behavior php library
+ * for the Zikula Application Framework
  * 
  * @license MIT
  *
@@ -15,7 +17,7 @@ use Doctrine\ORM\EntityRepository;
  */
 class BadBehavior_Entity_Repository_BadBehaviorRepository extends EntityRepository
 {
-    
+
     public function getLog($offset = 0, $orderBy = 'b.date', $sortDir = 'DESC')
     {
         $dql = "SELECT b FROM BadBehavior_Entity_BadBehavior b";
@@ -24,7 +26,7 @@ class BadBehavior_Entity_Repository_BadBehaviorRepository extends EntityReposito
             $dql .= " WHERE b.key != '00000000'";
         }
         $dql .= " ORDER BY $orderBy $sortDir";
-        
+
         $em = ServiceUtil::getService('doctrine.entitymanager');
         $query = $em->createQuery($dql);
 
@@ -36,15 +38,15 @@ class BadBehavior_Entity_Repository_BadBehaviorRepository extends EntityReposito
             $query->setFirstResult($offset);
         }
         $result = $query->getArrayResult(); // hydrate result to array
-        
+
         require_once (DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior-zikula13.php'));
         require_once (DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior/bad-behavior/responses.inc.php'));
 
         foreach ($result as $key => $item) {
             $result[$key]['message'] = bb2_get_response($item['key']);
         }
-        
+
         return $result;
     }
-    
+
 }
