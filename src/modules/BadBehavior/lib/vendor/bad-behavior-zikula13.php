@@ -61,10 +61,14 @@ if (defined('Zikula_Core::VERSION_NUM')) {
     function bb2_read_settings() {
         $bb2_settings = array(
             'log_table'     => 'badbehavior',
-            'display_stats' => true,
-            'strict'        => false, //ModUtil::getVar('BadBehavior', 'strict'),
-            'verbose'       => false, //ModUtil::getVar('BadBehavior', 'verbose'),
-            'logging'       => true, //ModUtil::getVar('BadBehavior', 'logging')
+            'display_stats' => ModUtil::getVar('BadBehavior', 'display_stats'),
+            'strict'        => ModUtil::getVar('BadBehavior', 'strict'),
+            'verbose'       => ModUtil::getVar('BadBehavior', 'verbose'),
+            'logging'       => ModUtil::getVar('BadBehavior', 'logging'),
+            'httpbl_key' => '',
+            'httpbl_threat' => '25',
+            'httpbl_maxage' => '30',
+            'offsite_forms' => false,
         );
         return $bb2_settings;
     }
