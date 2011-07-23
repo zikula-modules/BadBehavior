@@ -1,1 +1,23 @@
-readme file
+README
+======
+
+
+note: the Javascript method doesn't work (at the BB2 core level). This uses
+cookies exclusively.
+
+
+how to test if it works (2 ways):
+
+1) enable verbose logging - change settings in bad-behavior-zikula13.php so
+   verbose = true then visit your site. check your DB for entries
+
+-or-
+
+2) To insure that Bad Behavior is functioning correctly you can add the sting 
+   "Bad Behavior Test" to the User Agent (UA) of a HTTP request from someone who
+   is not in the whitelist and is not the administrator.
+
+    * Windows use FireFox with the "Modify Headers" add-on.
+    * Macintosh, "enable the Develop menu" in Safari.
+
+(adapted from [http://custom.simplemachines.org/mods/index.php?mod=2502])
