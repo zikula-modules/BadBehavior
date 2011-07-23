@@ -32,6 +32,7 @@
         <div class="z-formrow">
             <label for="itemsperpage">{gt text='Items per page on log display'}</label>
 			<input type="text" value="{$modvars.BadBehavior.itemsperpage}" id="itemsperpage" name="itemsperpage" />
+            <em class="z-sub z-formnote">{gt text='"0" for no limit.'}</em>
         </div>
     </fieldset>
     <div class="z-buttons z-formbuttons">

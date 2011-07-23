@@ -17,7 +17,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * BadBehavior entity class.
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="BadBehavior_Entity_Repository_BadBehaviorRepository")
  * @ORM\Table(name="badbehavior",indexes={@ORM\Index(name="ip_idx", columns={"ip"}),@ORM\Index(name="user_agent_idx", columns={"user_agent"})})
  */
 class BadBehavior_Entity_BadBehavior extends Zikula_EntityAccess
@@ -34,7 +34,7 @@ class BadBehavior_Entity_BadBehavior extends Zikula_EntityAccess
      */
     private $ip;
     /**
-     * @ORM\Column(name="`date`", type="date")
+     * @ORM\Column(name="`date`", type="datetime")
      */
     private $date = '0000-00-00 00:00:00';
     /**

@@ -1,4 +1,5 @@
 <?php
+
 class BadBehavior_Controller_Admin extends Zikula_AbstractController
 {
 
@@ -11,6 +12,16 @@ class BadBehavior_Controller_Admin extends Zikula_AbstractController
     {
         $this->throwForbiddenUnless(SecurityUtil::checkPermission('BadBehavior::', '::', ACCESS_ADMIN), LogUtil::getErrorMsgPermission());
         $this->redirect(ModUtil::url('BadBehavior', 'admin', 'modifyconfig'));
+    }
+
+    public function view()
+    {
+        $items = $this->entityManager
+                ->getRepository('BadBehavior_Entity_BadBehavior')
+                ->getLog();
+
+        return $this->view->assign('items', $items)
+                ->fetch('admin/view.tpl');
     }
 
     /**
