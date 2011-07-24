@@ -7,10 +7,10 @@
 <table class="z-datatable">
     <thead>
         <tr>
-            <td>{gt text='Date'}</td>
-            <td>{gt text='IP address'}</td>
-            <td>{gt text='Assigned Key'}</td>
-            <td>{gt text='Message'}</td>
+            <th>{gt text='Date'}</th>
+            <th>{gt text='IP address'}</th>
+            <th>{gt text='Assigned Key'}</th>
+            <th>{gt text='Message'}</th>
         </tr>
     </thead>
     <tbody>
@@ -26,3 +26,4 @@
         {/foreach}
     </tbody>
 </table>
+{adminfooter}
