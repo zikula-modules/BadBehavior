@@ -21,10 +21,8 @@ class BadBehavior_Listeners
      */
     public function init(Zikula_Event $event)
     {
-        if (ModUtil::getVar('BadBehavior', 'enabled')) {
-            // attach badbehavior screener
-            require_once (DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior-zikula13.php'));
-        }
+        // attach badbehavior screener
+        require_once (DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior-zikula13.php'));
     }
 
 }

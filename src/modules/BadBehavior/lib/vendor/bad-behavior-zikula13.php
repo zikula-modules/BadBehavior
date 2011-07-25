@@ -93,5 +93,7 @@ if (defined('Zikula_Core::VERSION_NUM')) {
     require_once(BB2_CWD . '/bad-behavior/version.inc.php');
     require_once(BB2_CWD . '/bad-behavior/core.inc.php');
 
-    bb2_start(bb2_read_settings());
+    if (ModUtil::getVar('BadBehavior', 'enabled')) {
+        bb2_start(bb2_read_settings());
+    }
 }
