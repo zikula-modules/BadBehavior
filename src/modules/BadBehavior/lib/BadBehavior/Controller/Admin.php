@@ -27,11 +27,18 @@ class BadBehavior_Controller_Admin extends Zikula_AbstractController
     {
         $this->throwForbiddenUnless(SecurityUtil::checkPermission('BadBehavior::', '::', ACCESS_ADMIN), LogUtil::getErrorMsgPermission());
 
+        $offset = $this->request->getGet()->get('offset', 0);
+        $count = $this->entityManager
+                ->createQuery('SELECT COUNT(b.id) FROM BadBehavior_Entity_BadBehavior b')
+                ->getSingleScalarResult();
+
         $items = $this->entityManager
                 ->getRepository('BadBehavior_Entity_BadBehavior')
-                ->getLog();
+                ->getLog($offset - 1);
 
         return $this->view->assign('items', $items)
+                ->assign('offset', $offset)
+                ->assign('totalrows', $count)
                 ->fetch('admin/view.tpl');
     }
 

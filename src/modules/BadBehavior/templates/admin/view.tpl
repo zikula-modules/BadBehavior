@@ -28,4 +28,5 @@
         {/foreach}
     </tbody>
 </table>
+{pager rowcount=$totalrows limit=$modvars.BadBehavior.itemsperpage posvar='offset'}
 {adminfooter}
