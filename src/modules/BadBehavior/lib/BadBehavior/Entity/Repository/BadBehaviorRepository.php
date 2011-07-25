@@ -39,8 +39,8 @@ class BadBehavior_Entity_Repository_BadBehaviorRepository extends EntityReposito
         }
         $result = $query->getArrayResult(); // hydrate result to array
 
-        require_once (DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior-zikula13.php'));
-        require_once (DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior/bad-behavior/responses.inc.php'));
+        require_once(DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior-zikula13.php'));
+        require_once(DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior/bad-behavior/responses.inc.php'));
 
         foreach ($result as $key => $item) {
             $result[$key]['message'] = bb2_get_response($item['key']);
