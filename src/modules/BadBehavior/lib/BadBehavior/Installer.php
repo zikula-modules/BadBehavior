@@ -62,6 +62,15 @@ class BadBehavior_Installer extends Zikula_AbstractInstaller
         switch ($oldversion) {
             case '2.0.33':
                 EventUtil::registerPersistentModuleHandler('BadBehavior', 'core.init', array('BadBehavior_Listeners', 'init'));
+                // remove table prefix
+                $prefix = $this->serviceManager['prefix'];
+                $connection = Doctrine_Manager::getInstance()->getConnection('default');
+                $sql = 'RENAME TABLE ' . $prefix . '_badbehavior' . " TO badbehavior";
+                $stmt = $connection->prepare($sql);
+                try {
+                    $stmt->execute();
+                } catch (Exception $e) {
+                }
             case '2.0.43':
             // future upgrades
         }
