@@ -25,12 +25,35 @@ class BadBehavior_Controller_Admin extends Zikula_AbstractController
 
     public function view()
     {
+        $this->throwForbiddenUnless(SecurityUtil::checkPermission('BadBehavior::', '::', ACCESS_ADMIN), LogUtil::getErrorMsgPermission());
+
         $items = $this->entityManager
                 ->getRepository('BadBehavior_Entity_BadBehavior')
                 ->getLog();
 
         return $this->view->assign('items', $items)
                 ->fetch('admin/view.tpl');
+    }
+
+    public function display()
+    {
+        $this->throwForbiddenUnless(SecurityUtil::checkPermission('BadBehavior::', '::', ACCESS_ADMIN), LogUtil::getErrorMsgPermission());
+
+        $id = $this->request->getGet()->get('id', null);
+        if ($id) {
+            $item = $this->entityManager->find('BadBehavior_Entity_BadBehavior', $id);
+
+            require_once(DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior-zikula13.php'));
+            require_once(DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior/bad-behavior/responses.inc.php'));
+
+            $message = bb2_get_response($item->getKey());
+
+            return $this->view->assign($item->toArray())
+                    ->assign('message', $message)
+                    ->fetch('admin/display.tpl');
+        }
+
+        $this->throwNotFound(LogUtil::getErrorMsgArgs());
     }
 
     /**

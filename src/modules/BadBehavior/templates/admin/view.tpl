@@ -11,6 +11,7 @@
             <th>{gt text='IP address'}</th>
             <th>{gt text='Assigned Key'}</th>
             <th>{gt text='Message'}</th>
+            <th>{gt text='Actions'}</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
             <td>{$i.ip|safetext}</td>
             <td>{$i.key|safetext}</td>
             <td>{$i.message.response|safetext}/{$i.message.explanation|safetext}/{$i.message.log|safetext}</td>
+            <td><a href='{modurl modname='BadBehavior' type='admin' func='display' id=$i.id}'>{img modname='core' set='icons/extrasmall' src='14_layer_visible.png' __title='View' __alt='View' class='tooltips'}</a></td>
         </tr>
         {foreachelse}
         <tr class='z-datatableempty'><td colspan='4'>{gt text='There are no log entries'}</td></tr>
