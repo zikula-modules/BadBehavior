@@ -36,7 +36,7 @@ class BadBehavior_Installer extends Zikula_AbstractInstaller
         EventUtil::registerPersistentModuleHandler('BadBehavior', 'core.init', array('BadBehavior_Listeners', 'init'));
 
         $modvars = array(
-            'enabled' => true,
+            'enable' => true,
             'strict' => false,
             'verbose' => false,
             'logging' => true,

@@ -85,7 +85,7 @@ class BadBehavior_Controller_Admin extends Zikula_AbstractController
         $this->throwForbiddenUnless(SecurityUtil::checkPermission('BadBehavior::', '::', ACCESS_ADMIN), LogUtil::getErrorMsgPermission());
 
         $modvars = array(
-            'enabled' => $this->request->getPost()->get('enabled', false),
+            'enable' => $this->request->getPost()->get('enable', false),
             'strict' => $this->request->getPost()->get('strict', false),
             'logging' => $this->request->getPost()->get('logging', false),
             'verbose' => $this->request->getPost()->get('verbose', false),

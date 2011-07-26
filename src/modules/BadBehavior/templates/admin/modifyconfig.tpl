@@ -10,8 +10,8 @@
         <fieldset>
             <legend>{gt text='General settings'}</legend>
             <div class="z-formrow">
-                <label for="enabled">{gt text='Enable Bad Behavior screening'}</label>
-                <input type="checkbox" value="1" id="enabled" name="enabled"{if $modvars.BadBehavior.enabled eq true} checked="checked"{/if} />
+                <label for="enable">{gt text='Enable Bad Behavior screening'}</label>
+                <input type="checkbox" value="1" id="enable" name="enable"{if $modvars.BadBehavior.enable eq true} checked="checked"{/if} />
             </div>
             <div class="z-formrow">
                 <label for="strict">{gt text='Use strict screening'}</label>
