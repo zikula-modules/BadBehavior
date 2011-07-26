@@ -4,20 +4,54 @@
     <h3>{gt text="Log entry"}</h3>
 </div>
 
-<div class='z-itemlist'>
-    <ul>
-        <li><span class='itemtitle'>IP address</span><span class='itemdata'>{$ip|safetext}</span></li>
-        <li><span class='itemtitle'>Date</span><span class='itemdata'>{$date->format('Y-m-d H:i:s')|safetext}</span></li>
-        <li><span class='itemtitle'>Request method</span><span class='itemdata'>{$request_method|safetext}</span></li>
-        <li><span class='itemtitle'>Request URI</span><span class='itemdata'>{$request_uri|safetext}</span></li>
-        <li><span class='itemtitle'>Server protocol</span><span class='itemdata'>{$server_protocol|safetext}</span></li>
-        <li><span class='itemtitle'>Http headers</span><span class='itemdata'>{$http_headers|safetext}</span></li>
-        <li><span class='itemtitle'>User agent</span><span class='itemdata'>{$user_agent|safetext}</span></li>
-        <li><span class='itemtitle'>Request entity</span><span class='itemdata'>{$request_entity|safetext}</span></li>
-        <li><span class='itemtitle'>key</span><span class='itemdata'>{$key|safetext}</span></li>
-        <li><span class='itemtitle'>Response</span><span class='itemdata'>{$message.response|safetext}</span></li>
-        <li><span class='itemtitle'>Explanation</span><span class='itemdata'>{$message.explanation|safetext}</span></li>
-        <li><span class='itemtitle'>Log</span><span class='itemdata'>{$message.log|safetext}</span></li>
-    </ul>
-</div>
+<table class="z-datatable">
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="IP address"}</th>
+        <td>{$ip|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="Date"}</th>
+        <td>{$date->format('Y-m-d H:i:s')|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="Request method"}</th>
+        <td>{$request_method|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="Request URI"}</th>
+        <td>{$request_uri|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="Server protocol"}</th>
+        <td>{$server_protocol|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="Http headers"}</th>
+        <td>{$http_headers|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="User agent"}</th>
+        <td>{$user_agent|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="Request entity"}</th>
+        <td>{$request_entity|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="Key"}</th>
+        <td>{$key|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="Response"}</th>
+        <td>{$message.response|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="Explanation"}</th>
+        <td>{$message.explanation|safetext}</td>
+    </tr>
+    <tr class="{cycle values="z-odd,z-even"}">
+        <th>{gt text="Log"}</th>
+        <td>{$message.log|safetext}</td>
+    </tr>
+</table>
 {adminfooter}
