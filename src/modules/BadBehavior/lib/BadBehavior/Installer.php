@@ -65,7 +65,7 @@ class BadBehavior_Installer extends Zikula_AbstractInstaller
                 // remove table prefix
                 $prefix = $this->serviceManager['prefix'];
                 $connection = Doctrine_Manager::getInstance()->getConnection('default');
-                $sql = 'RENAME TABLE ' . $prefix . '_badbehavior' . " TO badbehavior";
+                $sql = 'RENAME TABLE ' . $prefix . '_bad_behavior' . " TO badbehavior";
                 $stmt = $connection->prepare($sql);
                 try {
                     $stmt->execute();
