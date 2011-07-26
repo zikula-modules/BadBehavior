@@ -1,7 +1,7 @@
 {adminheader}
 <div class="z-admin-content-pagetitle">
     {icon type="config" size="small"}
-    <h3>{gt text="BadBehavior settings"}</h3>
+    <h3>{gt text="Settings"}</h3>
 </div>
 
 <form class="z-form" action="{modurl modname="BadBehavior" type="admin" func="updateconfig"}" method="post" enctype="application/x-www-form-urlencoded">

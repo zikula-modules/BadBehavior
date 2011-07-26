@@ -1,7 +1,7 @@
 {adminheader}
 <div class="z-admin-content-pagetitle">
     {icon type="log" size="small"}
-    <h3>{gt text="BadBehavior log entry"}</h3>
+    <h3>{gt text="Log entry"}</h3>
 </div>
 
 <div class='z-itemlist'>

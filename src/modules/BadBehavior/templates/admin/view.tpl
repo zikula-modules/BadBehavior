@@ -1,7 +1,7 @@
 {adminheader}
 <div class="z-admin-content-pagetitle">
     {icon type="view" size="small"}
-    <h3>{gt text="BadBehavior access log"}</h3>
+    <h3>{gt text="Access log"}</h3>
 </div>
 
 <table class="z-datatable">
@@ -24,7 +24,7 @@
             <td><a href='{modurl modname='BadBehavior' type='admin' func='display' id=$i.id}'>{img modname='core' set='icons/extrasmall' src='14_layer_visible.png' __title='View' __alt='View' class='tooltips'}</a></td>
         </tr>
         {foreachelse}
-        <tr class='z-datatableempty'><td colspan='4'>{gt text='There are no log entries'}</td></tr>
+        <tr class='z-datatableempty'><td colspan='5'>{gt text='There are no log entries'}</td></tr>
         {/foreach}
     </tbody>
 </table>
