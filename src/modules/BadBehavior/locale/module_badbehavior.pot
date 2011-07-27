@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Zikula 1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-07-27 15:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lib/vendor/bad-behavior/bad-behavior-wordpress.php:140
+#: lib/vendor/bad-behavior/bad-behavior-wordpress-admin.php:22
+#: lib/vendor/bad-behavior/bad-behavior-wordpress-admin.php:24
+#: lib/vendor/bad-behavior/bad-behavior-generic.php:125
+msgid "Bad Behavior"
+msgstr ""
+
+#: lib/vendor/bad-behavior/bad-behavior-wordpress.php:140
+#: lib/vendor/bad-behavior/bad-behavior-generic.php:125
+msgid "has blocked"
+msgstr ""
+
+#: lib/vendor/bad-behavior/bad-behavior-wordpress.php:140
+#: lib/vendor/bad-behavior/bad-behavior-generic.php:125
+msgid "access attempts in the last 7 days."
+msgstr ""
+
+#: lib/BadBehavior/Api/Admin.php:28 templates/admin/view.tpl:4
+msgid "Access log"
+msgstr ""
+
+#: lib/BadBehavior/Api/Admin.php:35 templates/admin/modifyconfig.tpl:4
+msgid "Settings"
+msgstr ""
+
+#: lib/BadBehavior/Controller/Admin.php:102
+msgid "Done! Updated the BadBehavior configuration."
+msgstr ""
+
+#: lib/BadBehavior/Version.php:27 lib/BadBehavior/Version.php:28
+msgid "BadBehavior"
+msgstr ""
+
+#. ! module name that appears in URL
+#: lib/BadBehavior/Version.php:30
+msgid "badbehavior"
+msgstr ""
+
+#: templates/admin/display.tpl:4
+msgid "Log entry"
+msgstr ""
+
+#: templates/admin/display.tpl:9 templates/admin/view.tpl:11
+msgid "IP address"
+msgstr ""
+
+#: templates/admin/display.tpl:13 templates/admin/view.tpl:10
+msgid "Date"
+msgstr ""
+
+#: templates/admin/display.tpl:17
+msgid "Request method"
+msgstr ""
+
+#: templates/admin/display.tpl:21
+msgid "Request URI"
+msgstr ""
+
+#: templates/admin/display.tpl:25
+msgid "Server protocol"
+msgstr ""
+
+#: templates/admin/display.tpl:29
+msgid "Http headers"
+msgstr ""
+
+#: templates/admin/display.tpl:33
+msgid "User agent"
+msgstr ""
+
+#: templates/admin/display.tpl:37
+msgid "Request entity"
+msgstr ""
+
+#: templates/admin/display.tpl:41
+msgid "Key"
+msgstr ""
+
+#: templates/admin/display.tpl:45
+msgid "Response"
+msgstr ""
+
+#: templates/admin/display.tpl:49
+msgid "Explanation"
+msgstr ""
+
+#: templates/admin/display.tpl:53
+msgid "Log"
+msgstr ""
+
+#: templates/admin/view.tpl:12
+msgid "Assigned Key"
+msgstr ""
+
+#: templates/admin/view.tpl:13
+msgid "Message"
+msgstr ""
+
+#: templates/admin/view.tpl:14
+msgid "Actions"
+msgstr ""
+
+#: templates/admin/view.tpl:24
+msgid "View"
+msgstr ""
+
+#: templates/admin/view.tpl:27
+msgid "There are no log entries"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:11
+msgid "General settings"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:13
+msgid "Enable Bad Behavior screening"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:17
+msgid "Use strict screening"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:21
+msgid "Enable logging"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:25
+msgid "Log everything (not just failed attempts)"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:29
+msgid "Display stats in footer"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:33
+msgid "Items per page on log display"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:35
+msgid "\"0\" for no limit."
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:39
+msgid "Save"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:40
+msgid "Cancel"
+msgstr ""
