@@ -19,7 +19,7 @@ class BadBehavior_Listeners
      *
      * @return void
      */
-    public function init(Zikula_Event $event)
+    public static function init(Zikula_Event $event)
     {
         // attach badbehavior screener
         require_once (DataUtil::formatForOS('modules/BadBehavior/lib/vendor/bad-behavior-zikula13.php'));
