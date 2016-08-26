@@ -28,7 +28,7 @@ class BadBehavior_Version extends Zikula_AbstractVersion
         $meta['description'] = $this->__("BadBehavior");
         //! module name that appears in URL
         $meta['url'] = $this->__('badbehavior');
-        $meta['version'] = '2.0.43';
+        $meta['version'] = '2.0.44';
         $meta['oldnames'] = array('Bad_Behaviour');
         $meta['core_min'] = '1.3.0'; // requires minimum 1.3.0 or later
         $meta['securityschema'] = array('BadBehavior::' => '::',
