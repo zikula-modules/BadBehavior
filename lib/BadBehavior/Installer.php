@@ -72,6 +72,8 @@ class BadBehavior_Installer extends Zikula_AbstractInstaller
                 } catch (Exception $e) {
                 }
             case '2.0.43':
+                // nothing
+            case '2.0.44':
             // future upgrades
         }
 
